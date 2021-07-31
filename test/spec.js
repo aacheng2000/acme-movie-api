@@ -1,4 +1,6 @@
 const {expect} = require('chai')
+const app = require('supertest')(require('../app'))
+
 
 describe('User.byToken', ()=>{
         describe('with a valid token', ()=> {
@@ -11,10 +13,12 @@ describe('User.byToken', ()=>{
 const request = require('supertest');
 const express = require('express');
 
-const app = express();
+//const app = express();
+
+
 
 describe('Routes', ()=> {
-    describe('get /', ()=> {
+    describe('GET /', ()=> {
         it('show information about the api', async() => {
             const response = await app.get('/');
             expect(response.status).to.equal(200);
