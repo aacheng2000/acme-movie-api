@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha",
-    "test:dev":"npm run test -- --watch"
+    "test:dev": "npm run test -- --watch"
   },
   "repository": {
     "type": "git",
@@ -20,6 +20,10 @@
   "homepage": "https://github.com/aacheng2000/acme-movie-api#readme",
   "devDependencies": {
     "chai": "^4.3.4",
-    "mocha": "^9.0.3"
+    "mocha": "^9.0.3",
+    "supertest": "^6.1.4"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
   }
 }
