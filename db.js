@@ -1,17 +1,23 @@
 //DATA LAYER
+
 const Sequelize = require('sequelize');
 const { STRING } = Sequelize;
 
 const config = {}
 
-if(process.env.SSL) {
-  config.dialectOptions = {
-    ssl: {
-      rejectUnauthorized: false
-    }
+//if(process.env.SSL) {
+//  config.dialectOptions = {
+//    ssl: {
+//      rejectUnauthorized: false
+//    }
+//  }
+//}
+config = {
+  connectionString: process.env.DATABASE_URL,
+  ssl: {
+    rejectUnauthorized: false
   }
 }
-
 
 
 
