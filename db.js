@@ -3,7 +3,7 @@
 const Sequelize = require('sequelize');
 const { STRING } = Sequelize;
 
-const config = {}
+let config = {}
 
 //if(process.env.SSL) {
 //  config.dialectOptions = {
